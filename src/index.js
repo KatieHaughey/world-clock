@@ -12,14 +12,26 @@ function updateTime() {
   )}`;
 
   //Paris
-  let ParisElement = document.querySelector("#paris");
+  let parisElement = document.querySelector("#paris");
 
-  let ParisDateElement = ParisElement.querySelector(".date");
-  ParisDateElement.innerHTML = moment().format("MMMM Do YYYY");
+  let parisDateElement = parisElement.querySelector(".date");
+  parisDateElement.innerHTML = moment().format("MMMM Do YYYY");
 
-  let ParisTime = moment().tz("Europe/Paris");
-  let ParisTimeElement = ParisElement.querySelector(".time");
-  ParisTimeElement.innerHTML = `${ParisTime.format(
+  let parisTime = moment().tz("Europe/Paris");
+  let parisTimeElement = parisElement.querySelector(".time");
+  parisTimeElement.innerHTML = `${parisTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  )}`;
+
+  //Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+
+  let tokyoDateElement = tokyoElement.querySelector(".date");
+  tokyoDateElement.innerHTML = moment().format("MMMM Do YYYY");
+
+  let tokyoTime = moment().tz("Asia/Tokyo");
+  let tokyoTimeElement = tokyoElement.querySelector(".time");
+  tokyoTimeElement.innerHTML = `${tokyoTime.format(
     "h:mm:ss [<small>]A[</small>]"
   )}`;
 }
